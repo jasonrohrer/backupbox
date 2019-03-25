@@ -7,4 +7,4 @@ do
 done
 
 
-sudo rtcwake -m off -l -t $(date +%s -d 'tomorrow 01:50')
+sudo rtcwake -m off -l -t $(date +%s -d 'tomorrow 02:55')
