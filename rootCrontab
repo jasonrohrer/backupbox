@@ -1,5 +1,5 @@
 SHELL=/bin/bash
 
-10 3 * * * ~/checkout/backupbox/rootCronJob.sh
+10 3 * * * /home/backupuser/checkout/backupbox/rootCronJob.sh >> /var/log/rootCronJob.log 2>&1
 
-10 10 * * * ~/checkout/backupbox/rootCronJobB.sh
+10 10 * * * /home/backupuser/checkout/backupbox/rootCronJobB.sh >> /var/log/rootCronJobB.log 2>&1

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 while [ -f /tmp/suCronJobRunning.txt ]
 do
     sleep 10
