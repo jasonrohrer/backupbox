@@ -1,0 +1,5 @@
+SHELL=/bin/bash
+
+10 2 * * * ~/checkout/backupbox/rootCronJob.sh
+
+10 10 * * * ~/checkout/backupbox/rootCronJobB.sh
