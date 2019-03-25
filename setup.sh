@@ -78,6 +78,31 @@ EOSU2
 
 
 
+cd ~
+
+mkdir tempSetupCheckout
+
+cd tempSetupCheckout
+
+git clone https://github.com/jasonrohrer/backupbox.git
+
+cd backupbox
+crontab -l
+crontab rootCrontab
+crontab -l
+
+cd ~
+rm -r tempSetupCheckout
+
+
+
+echo ""
+echo ""
+echo "Be sure that backupbox is checked out in /home/$mainUser/checkout/backupbox"
+echo ""
+echo ""
+
+
 echo ""
 echo ""
 echo "Be sure to add custom backup operations to /home/$backupName/myBackupOps.sh"
