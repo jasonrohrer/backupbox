@@ -43,6 +43,22 @@ cd backupbox
 
 cp myBackupOps.sh ~
 
+cd ~
+
+mkdir .ssh
+scp jcr15@onehouronelife.com:.ssh/remoteServers_id_rsa .ssh/
+
+echo -e "\
+Host  backup.onehouronelife.com\n\
+HostName   backup.onehouronelife.com\n\
+IdentityFile ~/.ssh/remoteServers_id_rsa\n\
+User    jcr13\n" >> .ssh/config
+
+ssh backup.onehouronelife.com "echo 'Connection tested'"
+
+
+cd ~/checkout/backupbox
+
 crontab userCrontab
 
 

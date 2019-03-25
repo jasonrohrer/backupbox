@@ -14,3 +14,15 @@ echo ""
 echo "Warning:  No user-supplied backup operations to perform."
 echo ""
 echo ""
+
+#exit 1
+
+latestList=`ssh backup.onehouronelife.com "cd backups; find . -name '*.gz' -mtime -1" | sed -e "s/\./backups"`
+
+
+while read -r line; do
+    scp backup.onehouronelife.com:$line .
+done <<< "$latestList"
+
+
+
