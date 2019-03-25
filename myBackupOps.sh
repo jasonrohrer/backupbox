@@ -25,4 +25,23 @@ while read -r line; do
 done <<< "$latestList"
 
 
+git clone https://github.com/jasonrohrer/OneLife.git
+git clone https://github.com/jasonrohrer/OneLifeData7.git
+git clone https://github.com/jasonrohrer/OneLifeGraphicsMasters.git
+git clone https://github.com/jasonrohrer/OneLifeMusicMaster.git
+git clone https://github.com/jasonrohrer/OneLifeData7_trailer1.git
+git clone https://github.com/jasonrohrer/minorGems.git
+git clone https://github.com/jasonrohrer/jason-rohrer.git
+git clone https://github.com/jasonrohrer/backupbox.git
+git clone https://github.com/jasonrohrer/Primrose.git
+git clone https://github.com/jasonrohrer/leadController.git
+git clone https://github.com/jasonrohrer/wallClockProfiler.git
+git clone https://github.com/jasonrohrer/tinySockets.git
+git clone https://github.com/jasonrohrer/SleepIsDeath.git
+git clone https://github.com/jasonrohrer/GameDesignSketchbook.git
+git clone https://github.com/jasonrohrer/Between.git
+git clone https://github.com/jasonrohrer/Gravitation.git
+git clone https://github.com/jasonrohrer/Passage.git
+git clone https://github.com/jasonrohrer/Cultivation.git
+git clone https://github.com/jasonrohrer/Transcend.git
 
