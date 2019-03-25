@@ -51,6 +51,13 @@ crontab userCrontab
 EOSU
 
 
+echo -n "Enter username of 'safe' account\n\
+This is the sudoer account that already exists: "
+
+read mainUser
+
+
+su $mainUser<<EOSU2
 
 mkdir tempSetupCheckout
 
@@ -59,12 +66,14 @@ cd tempSetupCheckout
 git clone https://github.com/jasonrohrer/backupbox.git
 
 cd backupbox
+crontab -l
 crontab suCrontab
-
+crontab -l
 
 cd ~
 rm -r tempSetupCheckout
 
+EOSU2
 
 
 
