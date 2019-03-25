@@ -4,7 +4,7 @@ echo "running" > /tmp/suCronJobRunning.txt
 
 cd ~/backups
 
-date=`date +"%Y_%b_%d_%a"`
+date=`date +"%Y_%m%b_%d_%a"`
 
 mkdir $date
 
