@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "running" > /tmp/suCronJobRunning.txt
+
 cd ~/backups
 
 date=`date +"%Y_%b_%d_%a"`
@@ -17,10 +19,13 @@ remainSize=$[remainSize * 1024]
 remainSize=`echo -n $remainSize | numfmt --to=iec-i | sed -e 's/\([0-9.]*\)/\1 /'`
 
 
-reportDate=`date`
+reportDate=`date | fmt -w 24`
 
 echo -e "\
 $reportDate\n\
 Backup folder:\n     $date\nsafely archived.\n\
 ${backupSize}B in this backup.\n\
 ${remainSize}B left on disk.\n\n" | lpr -P epson
+
+
+rm /tmp/suCronJobRunning.txt
