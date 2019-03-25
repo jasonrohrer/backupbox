@@ -131,3 +131,10 @@ echo "Be sure to add a printer called 'epson' for lpr"
 echo ""
 echo ""
 
+echo ""
+echo -n "Hit ENTER when you're ready to set wakeup time and shut down:"
+
+read userInput
+
+
+sudo rtcwake -m off -l -t $(date +%s -d 'tomorrow 01:50')
