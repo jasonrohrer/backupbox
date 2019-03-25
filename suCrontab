@@ -1,3 +1,4 @@
 SHELL=/bin/bash
 
-0 10 * * * ~/backupbox/suCronJob.sh
+0 10 * * * ~/checkout/backupbox/suCronJob.sh
+
