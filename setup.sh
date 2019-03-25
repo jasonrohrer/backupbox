@@ -6,8 +6,6 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 
-cd ~
-mkdir backups
 
 
 backupName="backupuser"
@@ -51,13 +49,16 @@ crontab userCrontab
 EOSU
 
 
-echo -n "Enter username of 'safe' account\n\
-This is the sudoer account that already exists: "
+echo "Enter username of 'safe' account"
+echo -n "This is the sudoer account that already exists: "
 
 read mainUser
 
 
 su $mainUser<<EOSU2
+
+cd ~
+mkdir backups
 
 mkdir tempSetupCheckout
 
