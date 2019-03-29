@@ -1,4 +1,4 @@
 SHELL=/bin/bash
 
-0 3 * * * ~/checkout/backupbox/userCronJob.sh
+0 4 * * * ~/checkout/backupbox/userCronJob.sh
 
