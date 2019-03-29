@@ -47,7 +47,7 @@ Backup folder:\n     $date\nsafely archived.\n\
 ${backupCount} files.\n\
 ${backupSize}B in this backup.\n\
 ${remainSize}B left on disk.\n\
-${timeLeft}\n\n" | lpr -P epson
+${timeLeft} left\n\n" | lpr -P epson
 
 
 rm /tmp/suCronJobRunning.txt
