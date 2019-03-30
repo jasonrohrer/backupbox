@@ -1,5 +1,10 @@
 #!/bin/bash
 
+thisDate=`date`
+
+echo "userCronJob starting at $thisDate"
+
+
 echo "running" > /tmp/userCronJobRunning.txt
 
 
@@ -14,4 +19,8 @@ cd $date
 ~/myBackupOps.sh
 
 
+
 rm /tmp/userCronJobRunning.txt
+
+thisDate=`date`
+echo "userCronJob finished at $thisDate"

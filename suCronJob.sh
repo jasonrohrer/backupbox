@@ -1,5 +1,10 @@
 #!/bin/bash
 
+thisDate=`date`
+
+echo "suCronJob starting at $thisDate"
+
+
 echo "running" > /tmp/suCronJobRunning.txt
 
 cd ~/backups
@@ -51,3 +56,8 @@ ${timeLeft} left\n\n" | lpr -P epson
 
 
 rm /tmp/suCronJobRunning.txt
+
+
+thisDate=`date`
+
+echo "suCronJob ending at $thisDate"
