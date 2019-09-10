@@ -55,6 +55,12 @@ ${remainSize}B left on disk.\n\
 ${timeLeft} left\n\n" | lpr -P epson
 
 
+# sleep here to make sure print job finishes before shutdown
+# otherwise, a duplicate job might print at next startup,
+# in the middle of the night
+sleep 30
+
+
 rm /tmp/suCronJobRunning.txt
 
 
