@@ -6,6 +6,13 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 
+# install packages
+apt install git emacs
+
+# for beep package
+modprobe snd-pcsp
+apt install beep
+
 
 
 backupName="backupuser"
