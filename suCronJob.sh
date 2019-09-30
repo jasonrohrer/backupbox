@@ -60,6 +60,24 @@ ${timeLeft} left\n\n" | lpr -P epson
 # in the middle of the night
 sleep 30
 
+queueResult=`lpq -P epson | grep "no entries"`
+
+
+if [[ $queueResult =~ "no entries" ]]
+then
+    echo "suCronJob print job completed"
+else
+    echo "suCronJob did NOT complete"
+    echo "entering beeping loop"
+
+    while ! [[ $queueResult =~ "no entries" ]]
+    do
+	beep -l 1000
+	sleep 30
+	queueResult=`lpq -P epson | grep "no entries"`
+    done
+fi
+
 
 rm /tmp/suCronJobRunning.txt
 
