@@ -67,19 +67,33 @@ if [[ $queueResult =~ "no entries" ]]
 then
     echo "suCronJob print job completed"
 else
-    echo "suCronJob did NOT complete"
+    thisDate=`date`
+    echo "suCronJob print job did NOT complete at $thisDate"
     echo "entering beeping loop"
 
-    while ! [[ $queueResult =~ "no entries" ]]
+    start_time=`date -u +%s`
+    elapsed=0
+    
+    while ! [[ $queueResult =~ "no entries" ]] && [ $elapsed -lt 3600 ]
     do
 	beep -l 1000
 	sleep 30
+
+	this_time=`date -u +%s`
+	elapsed=$[ this_time - start_time ]
+
 	queueResult=`lpq -P epson | grep "no entries"`
     done
     
     thisDate=`date`
 
-    echo "suCronJob print job finally went through at $thisDate"
+    if [ $elapsed -ge 3600 ]
+    then
+       lprm -P epson -
+       echo "suCronJob finally gave up and canceled print job at $thisDate"
+    else
+	echo "suCronJob print job finally went through at $thisDate"
+    fi
 fi
 
 
