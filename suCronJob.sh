@@ -76,6 +76,10 @@ else
 	sleep 30
 	queueResult=`lpq -P epson | grep "no entries"`
     done
+    
+    thisDate=`date`
+
+    echo "suCronJob print job finally went through at $thisDate"
 fi
 
 
