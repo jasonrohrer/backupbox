@@ -44,4 +44,12 @@ git clone https://github.com/jasonrohrer/Gravitation.git
 git clone https://github.com/jasonrohrer/Passage.git
 git clone https://github.com/jasonrohrer/Cultivation.git
 git clone https://github.com/jasonrohrer/Transcend.git
+git clone https://github.com/jasonrohrer/ProjectNovemberGraphicsMasters.git
+git clone https://github.com/jasonrohrer/tempProjects.git
 
+
+# private repositories, need keys for git user specified in .ssh/config
+git clone git@github.com:jasonrohrer/jason-rohrer-private.git
+git clone git@github.com:jasonrohrer/ProjectSkydropGraphicsMasters.git
+git clone git@github.com:jasonrohrer/ProjectNovember.git
+git clone git@github.com:jasonrohrer/book0.git
