@@ -93,7 +93,7 @@ curYear=2000
 while [ $curYear -le $oldYear ]; do
   echo "Actually DELETING daily backups for $curYear"
 
-  find  -mindepth 1 -maxdepth 1 -name "${curYear}_*" \! -name "*_01_*" -exec rm -r {} +
+  find  -mindepth 1 -maxdepth 1 -name "${curYear}_*" \! -name "*_01_*" -exec rm -rf {} +
 
   ((curYear++))
 
